@@ -1,0 +1,30 @@
+<main (window:resize)="onResize($event)" (window:scroll)="onScroll()">
+  <app-nav></app-nav>
+  <app-home
+    [hidden]="isMobile && currentIdSection != navigatorSection.homeId"
+    [id]="navigatorSection.homeId"></app-home>
+  <app-division
+    [hidden]="isMobile"
+    divisionImg="assets/wave1.svg"></app-division>
+  <app-skill
+    [hidden]="isMobile && currentIdSection != navigatorSection.skillsId"
+    [id]="navigatorSection.skillsId"
+  ></app-skill>
+  <app-division
+    *ngIf="! isMobile"
+    divisionImg="assets/wave2.svg"></app-division>
+  <app-project
+    [hidden]="isMobile && currentIdSection != navigatorSection.projectId"
+    [id]="navigatorSection.projectId"
+  ></app-project>
+  <app-division
+    [hidden]="isMobile"
+    divisionImg="assets/wave3.svg"></app-division>
+  <app-contact
+    [hidden]="isMobile && currentIdSection != navigatorSection.contactId"
+    [id]="navigatorSection.contactId"
+  ></app-contact>
+</main>
+
+
+<!--<app-edit-info></app-edit-info>-->

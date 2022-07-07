@@ -1,0 +1,68 @@
+.container-home {
+  height: 100vh;
+  background-size: contain !important;
+  background: black url("/assets/cover2.png") center no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-animation {
+  display: flex !important;
+  justify-content: center;
+  background: #000
+}
+
+.container-info-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container-info-right {
+  width: 33%;
+  padding: 40px;
+}
+
+
+@media screen and (max-width: 950px) {
+  .container-info-right {
+    width: 36%;
+    padding: 20px;
+  }
+
+  .container-info-left {
+    width: 36%;
+    padding: 20px;
+  }
+
+  .container-social-links {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  /* add padding from navigation bar */
+  .container-home {
+    background: black;
+    display: block;
+    padding-top: 70px;
+    height: calc(100vh - 70px);
+  }
+
+  .container-info-left {
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .container-info-right {
+    width: auto;
+    height: auto;
+    padding: 0 35px;
+  }
+}

@@ -1,0 +1,20 @@
+<nav
+  class="container-nav"
+  >
+  <!-- icon menu -->
+  <div
+    class="container-icon"
+    [hidden]="!isMobile "
+    (click)="onClickMobile()">
+      <fa-icon size="2x" class="icon-menu" [icon]="iconMenu"></fa-icon>
+  </div>
+
+  <!-- container links navigation -->
+  <ul [hidden]="isGoneMenu && isMobile" class="container-links-menu" id="navigation-links">
+    <ng-container *ngFor="let idSection of listIdsSections">
+      <li
+        [class.section-active]="(currentIdSection | async) == idSection">0
+        <a (click)="scrollToSection(idSection)">{{idSection}}</a></li>
+    </ng-container>
+  </ul>
+</nav>

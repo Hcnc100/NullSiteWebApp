@@ -1,0 +1,22 @@
+<div class="container-card-project" *ngIf="project!=null">
+  <div class="container-img-project">
+    <img
+      [src]="project.urlImg"
+      [alt]="'img-project'+project.name">
+    <div class="overlay overlayBottom container-text-card">
+      <div class="container-description">
+        <h2>{{project.name}}</h2>
+        <p
+          ellipsis="..."
+          [ellipsis-content]="project.description"></p>
+      </div>
+      <a target="_blank" class="button-project" [href]="project.urlRepo">
+        <fa-icon [icon]="icon"></fa-icon>
+        <span> See project</span></a>
+    </div>
+
+    <div class="single-line-color"></div>
+  </div>
+
+
+</div>

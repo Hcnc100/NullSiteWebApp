@@ -1,0 +1,56 @@
+.container-change-button{
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container-edit-photo{
+  position: relative;
+  width: fit-content;
+}
+
+.container-edit-button{
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  color: white;
+  background: #1976d2;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+.container-edit-button:hover{
+  cursor: pointer;
+}
+
+.container-edit-button:active{
+  transform: scale(90%);
+}
+.img-profile{
+  width: 20vw;
+  height: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 140px;
+  min-height: 140px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 800px)  {
+  .img-profile{
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-edit-button {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+  }
+}

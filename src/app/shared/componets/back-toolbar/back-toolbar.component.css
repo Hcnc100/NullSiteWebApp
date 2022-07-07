@@ -1,0 +1,34 @@
+.container-back{
+
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container-icon-back{
+  width: 25px;
+  height: 25px;
+  padding:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.container-icon-back:hover{
+  background: gray;
+}
+
+.container-icon-back:active{
+  transform: scale(90%);
+}
+.title_toolbar{
+  margin:  0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

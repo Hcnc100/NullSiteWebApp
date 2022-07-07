@@ -1,0 +1,36 @@
+<div class="container-form">
+  <h3>Personal Info</h3>
+  <form [formGroup]="formInfo" class="form-edit">
+    <div class="container-input">
+      <div>
+        <label>Name</label>
+        <div class="separator-span"></div>
+        <input type="text" placeholder="Nombre" formControlName="name">
+      </div>
+      <span class="count-length"
+            [ngStyle]="{'color':  formInfo.controls['name'].value?.length > maxLengthName ? 'red' :  'black'}">
+        {{formInfo.controls['name'].value?.length}}
+        /{{maxLengthName}}</span>
+    </div>
+    <div class="container-input">
+      <label>Profession</label>
+      <div class="separator-span"></div>
+      <input type="text" placeholder="Profession" formControlName="profession">
+      <span class="count-length"
+            [ngStyle]="{'color':  formInfo.controls['profession'].value?.length > maxLengthProfession ? 'red' :  'black'}">
+        {{formInfo.controls['profession'].value?.length}}
+        /{{maxLengthProfession}}</span>
+    </div>
+    <div class="container-input">
+      <label>Description</label>
+      <div class="separator-span"></div>
+      <textarea placeholder="Description" formControlName="description" class="input-description"></textarea>
+      <span class="count-length"
+            [ngStyle]="{'color':  formInfo.controls['description'].value?.length > maxLengthDescription ? 'red' :  'black'}">
+        {{formInfo.controls['description'].value?.length}}
+        /{{maxLengthDescription}}</span>
+    </div>
+    <input type="submit" value="submit">
+  </form>
+</div>
+

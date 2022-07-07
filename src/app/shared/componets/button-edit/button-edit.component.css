@@ -1,0 +1,25 @@
+.container-edit-home{
+  width: 50px;
+  height: 50px;
+  background-color:#0C9;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.edit-home{
+  color: white;
+  position: absolute;
+
+}
+
+.container-edit-home:hover{
+  cursor: pointer;
+}
+
+.container-edit-home:active{
+  transform: scale(.8);
+}

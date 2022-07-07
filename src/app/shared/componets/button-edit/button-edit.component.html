@@ -1,0 +1,10 @@
+<div
+  (click)="sendClickEvent()"
+  *ngIf="isUserAuth() | async"
+  class="container-edit-home">
+  <fa-icon
+    [icon]="iconButton"
+    class="edit-home"
+    [ngStyle]="{'color': colorIcon}">
+  </fa-icon>
+</div>

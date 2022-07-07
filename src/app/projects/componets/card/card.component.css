@@ -1,0 +1,198 @@
+.container-card-project {
+  background: black;
+  border: black;
+}
+
+.container-img-project {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+
+.button-project {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #8c8c8c;
+  text-decoration: none;
+  color: white;
+  width: 120px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.button-project:active {
+  transform: scale(0.98);
+}
+
+.single-line-color {
+  width: 100%;
+  height: 1px;
+  background: black;
+  bottom: 0;
+  position: absolute;
+}
+
+
+.overlay {
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.container-img-project:hover .overlay {
+  opacity: 1;
+}
+
+.overlayBottom {
+  overflow: hidden;
+  width: calc(100% - 10px);
+  height: 32px;
+  bottom: 1px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-description p{
+  height: 9vw;
+}
+
+.overlayBottom:hover {
+  height: 100%;
+}
+
+.container-text-card {
+  color: white;
+  padding: 5px;
+}
+
+h2 {
+  margin-top: 5px;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 950px) {
+  .container-img-project {
+    width: 20vw;
+    height: 20vw;
+    min-height: 160px;
+    min-width: 160px;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-top: 8px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-img-project {
+    width: 30vw;
+    height: 30vw;
+    min-height: 170px;
+    min-width: 170px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 850px){
+  .container-img-project {
+    width: 25vw;
+    height: 25vw;
+    min-height: 150px;
+    min-width: 150px;
+  }
+}
+
+  @media screen and (max-width: 550px) {
+  .container-img-project {
+    width: 36vw;
+    height: 36vw;
+    min-height: 150px;
+    min-width: 150px;
+  }
+    .container-description p{
+      height: 20vw;
+    }
+
+  h2 {
+    font-size: 17px;
+    margin-right: 50px;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 6px 0;
+  }
+
+  .button-project span {
+    display: none;
+
+  }
+
+  .button-project {
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+    padding: 9px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    border: none;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+  .container-description p{
+    height: 35vw;
+  }
+  .container-img-project {
+    width: 80vw;
+    height: 80vw;
+    min-height: 135px;
+    min-width: 145px;
+    max-width: 190px;
+    max-height: 190px;
+  }
+
+  h2.text-card {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+

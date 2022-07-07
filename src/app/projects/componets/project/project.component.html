@@ -1,0 +1,22 @@
+<div class="container-last-projects container-section">
+  <ng-container *ngIf="(listProjects | async);else blockAnimation">
+    <h2 [hidden]="(isMobile | async)" class="title-last-projects">Last projects</h2>}
+    <h2 [hidden]="!(isMobile | async)" class="title-projects">Projects</h2>
+    <div class="container-projects">
+      <ng-container *ngFor="let project of listProjects | async ;let index=index;">
+        <app-card
+          [hidden]="index>1 && isOverFlowProjects"
+          [project]="project" class="item-project"></app-card>
+      </ng-container>
+    </div>
+
+    <a class="button-github" href="https://github.com/Hcnc100" target="_blank">
+      <fa-icon [icon]="icon"></fa-icon>
+      Go to my github</a>
+  </ng-container>
+  <ng-template #blockAnimation>
+    <app-loading [pathArg]="'/assets/loading3.json'"></app-loading>
+  </ng-template>
+
+  <app-button-edit (clickEvent)="goToEditProject()" class="button-edit-component"></app-button-edit>
+</div>

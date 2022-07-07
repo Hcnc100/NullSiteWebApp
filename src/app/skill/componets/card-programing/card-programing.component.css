@@ -1,0 +1,73 @@
+.container-icon {
+  border: 1px solid rgba(128, 128, 128, 0.41);
+  text-align: center;
+  width: 15vw;
+  height: 15vw;
+  max-width: 120px;
+  max-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 14px 21px 41px -18px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 14px 21px 41px -18px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 14px 21px 41px -18px rgba(0, 0, 0, 0.58);
+  font-size: 20px;
+}
+
+.container-icon span {
+  margin: 10px 0;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .container-icon {
+    width: 12vw;
+    height: 12vw;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container-icon {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container-icon {
+    font-size: 15px;
+    width: 14vw;
+    height: 14vw;
+    min-width: 75px;
+    min-height: 75px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .container-icon {
+    flex-direction: row;
+    font-size: 14px;
+    width: 14vw;
+    height: 16vw;
+    min-width: 95px;
+    min-height: 50px;
+  }
+
+  .spacer-row {
+    width: 5px;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .container-icon {
+    font-size: 12px;
+    min-width: 80px;
+    min-height: 50px;
+  }
+
+}

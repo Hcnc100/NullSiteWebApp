@@ -1,0 +1,26 @@
+<div
+  [class.container-animation]="!(infoProfile|async)"
+  class="container-home container-section">
+  <!--  show only info is load -->
+  <ng-container *ngIf="infoProfile| async; else animateLoad">
+    <!-- img and social buttons -->
+    <div class="container-info-left">
+      <app-img-profile [infoProfile]="infoProfile"></app-img-profile>
+      <app-social-links></app-social-links>
+    </div>
+    <!-- info personal profile -->
+    <div class="container-info-right">
+      <app-personal-info [infoProfile]="infoProfile"></app-personal-info>
+    </div>
+    <!-- button edit when is auth-->
+    <app-button-edit
+      (clickEvent)="goToEditHome()"
+      class="button-edit-component"></app-button-edit>
+  </ng-container>
+
+  <!--  show only info is loaded -->
+  <ng-template #animateLoad class="container-animation">
+    <app-loading [pathArg]="'/assets/loading.json'"></app-loading>
+  </ng-template>
+
+</div>

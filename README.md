@@ -1,0 +1,2 @@
+# NullPointerPage
+My simple website

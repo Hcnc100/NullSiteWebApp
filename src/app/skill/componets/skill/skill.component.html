@@ -1,0 +1,28 @@
+<div class="container-skills" (window:resize)="onResize($event)">
+  <div class="container-language-programming">
+    <h3 class="title-skills">Skills</h3>
+    <h3 class="title-items-skills">Programming languages</h3>
+    <div class="container-cards-items">
+<!--      when is mobile screen show all items-->
+      <ng-container *ngFor="let item of itemsSkills">
+        <app-card-programing
+          *ngIf="item.isProgramming() || isMobile" [itemProgramming]="item"
+        ></app-card-programing>
+      </ng-container>
+    </div>
+  </div>
+  <!--      when is mobile gone this-->
+  <div class="container-technology" [hidden]="isMobile">
+    <h3 class="title-items-skills">Technologies</h3>
+    <div class="container-cards-items">
+      <ng-container *ngFor="let item of itemsSkills">
+        <app-card-programing
+          *ngIf="item.isTech()" [itemProgramming]="item"
+        ></app-card-programing>
+      </ng-container>
+    </div>
+  </div>
+
+  <a id="button-certificate">See latest certificates</a>
+
+</div>

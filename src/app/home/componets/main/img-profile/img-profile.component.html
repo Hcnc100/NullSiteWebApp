@@ -1,0 +1,18 @@
+<div class="container-img-container">
+  <img
+       [src]="(infoProfile | async)?.urlImg"
+       (load)="changeLoad()"
+       [class.container-img-load]="isLoading"
+       alt="Imagen de perfil"
+       class="container-img-profile"
+  >
+
+  <ng-container *ngIf="isLoading" >
+    <app-loading
+      class="container-animation"
+      [pathArg]="'/assets/loading2.json'"></app-loading>
+  </ng-container>
+
+</div>
+
+

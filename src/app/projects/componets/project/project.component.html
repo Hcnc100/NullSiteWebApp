@@ -1,6 +1,6 @@
 <div class="container-last-projects container-section">
   <ng-container *ngIf="(listProjects | async);else blockAnimation">
-    <h2 [hidden]="(isMobile | async)" class="title-last-projects">Last projects</h2>}
+    <h2 [hidden]="(isMobile | async)" class="title-last-projects">Last projects</h2>
     <h2 [hidden]="!(isMobile | async)" class="title-projects">Projects</h2>
     <div class="container-projects">
       <ng-container *ngFor="let project of listProjects | async ;let index=index;">

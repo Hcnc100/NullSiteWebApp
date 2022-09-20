@@ -3,4 +3,5 @@ export interface Email {
   readonly name: string;
   readonly subject: string;
   readonly message: string;
+  readonly isOpen: boolean;
 }

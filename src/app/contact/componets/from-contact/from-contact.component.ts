@@ -68,7 +68,8 @@ export class FromContactComponent implements OnInit {
       name: this.formContact.controls['name'].value,
       email: this.formContact.controls['email'].value,
       subject: this.formContact.controls['subject'].value,
-      message: this.formContact.controls['message'].value
+      message: this.formContact.controls['message'].value,
+      isOpen: false,
     }
   }
 }
